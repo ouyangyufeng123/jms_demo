@@ -20,16 +20,15 @@ public class ActivemqConsumer {
      * @return
      */
     @JmsListener(destination = "mytest.queue")
-    // @SendTo("out.queue")
-    public void receiveQueue(String text) {
+    @SendTo("out.queue")
+    public String receiveQueue(String text) {
         if (count >= 0) {
-//            System.out.println("Consumer收到的报文为:" + text);
             System.out.println("已秒杀" + text);
         } else {
             System.out.println("活动结束!");
         }
         count -= 1;
-        //return text;
+        return text;
     }
 
 

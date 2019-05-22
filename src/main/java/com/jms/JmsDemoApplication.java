@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author ouyangyufeng
  */
-@SpringBootApplication
 //@EnableJms
+@SpringBootApplication
 public class JmsDemoApplication {
 
 	public static void main(String[] args) {
